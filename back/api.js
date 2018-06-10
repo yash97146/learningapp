@@ -18,7 +18,7 @@ module.exports = function (router) {
 				if (err) {
 					res.json({ success: false, message: err });
 				}else{
-					sgMail.setApiKey('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');
+					sgMail.setApiKey('');
 					msg = {
 					  to: user.email,
 					  from: 'Confirm@Interestedme.com',
