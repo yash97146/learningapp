@@ -1,0 +1,10 @@
+<div>
+	<div>
+		{{ login.msg }}
+	</div>
+	<form ng-submit="login.authentication(logindata)">
+	username: <input type="text" ng-model="login.logindata.username"><br>
+	password: <input type="password" ng-model="login.logindata.password">
+	<button ng-submit="">Submit</button>
+	</form>
+</div>

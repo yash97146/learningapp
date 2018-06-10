@@ -1,0 +1,9 @@
+<div>
+	<div>
+		{{ forgot.msg }}
+	</div>
+	<form ng-submit="forgot.sendUsername(forgotdata)">
+	email: <input type="text" ng-model="forgot.forgotdata.email" name="email"><br>
+	<button>Submit</button>
+	</form>
+</div>

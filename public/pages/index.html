@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<base href="/">
+	<script type="text/javascript" src="assets/js/angular.js"></script>
+	<script type="text/javascript" src="assets/js/angular-route.js"></script>
+	<script src="app/app.js"></script>
+    <script src="app/route.js"></script>
+    <script type="text/javascript" src="controller/RegisterCtrl.js"></script>
+    <script type="text/javascript" src="controller/LoginCtrl.js"></script>
+    <script type="text/javascript" src="controller/EmailCtrl.js"></script>
+    <script type="text/javascript" src="controller/forgotcontroller.js"></script>
+    <script type="text/javascript" src="controller/ForgotPasswordCtrl.js"></script>
+    <script type="text/javascript" src="controller/resetpasswordcontroller.js"></script>
+    <script type="text/javascript" src="services/registerservices.js"></script>
+    <script type="text/javascript" src="services/authenticationservices.js"></script>
+</head>
+<body ng-App = 'AppUse' ng-controller="lgnCtrl as login" ng-show="login.loadme">
+<div>
+	This is Home Page.
+</div>
+<div>
+<a href="/about">About</a>
+<div ng-show="login.log">
+	<a href="/profile">{{login.username}}</a>
+	<a href="#" ng-click="login.logout()">logout</a>
+</div>
+<div ng-show="!login.log">
+	<a href="register">Register</a>
+	<a href="login">Login</a>
+</div><br>
+<a href="/forgotusername">forgot username?</a>
+<a href="/forgotpassword">forgot password?</a>
+</div><br>
+ <div ng-view></div>
+</body>
+</html>

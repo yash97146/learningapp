@@ -1,0 +1,19 @@
+<div>
+	<div ng-show="register.error">
+		{{register.message}}
+	</div>
+	<div ng-show="register.success">
+		{{register.message}}
+	</div>
+	<div ng-show="register.loading">
+		loading
+	</div>
+	<form name="regform" ng-submit="register.reguser(regdata);" novalidate>
+	name: <input type="text" ng-model="register.regdata.name" required=""><br>
+	email: <input type="text" ng-model="register.regdata.email"><br>
+	username: <input type="text" ng-model="register.regdata.username"><br>
+	password: <input type="password" ng-model="register.regdata.password"><br>
+	Confirm Password : <input type="text" ng-model="register.regdata.Conpassword">
+	<button>Submit</button><br>
+	</form>
+</div>
